@@ -1,5 +1,5 @@
 # DNSWatch-take-home
 
-To run: \n
-pip3 install requests \n
-python3 DNSWatch-take-home.py
+To run:
+1) pip3 install requests
+2) python3 DNSWatch-take-home.py
