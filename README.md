@@ -1,8 +1,8 @@
 # DNSWatch-take-home
 
 To run:
-1) pip install -r requirements.txt
-2) python3 DNSWatch-take-home.py
+1) `pip install -r requirements.txt`
+2) `python3 DNSWatch-take-home.py`
 
 # How it works:
 There are two main functions load_domain_feed and is_domain_in_domain_feed. 
