@@ -1,5 +1,7 @@
 # DNSWatch-take-home
 
 To run:
-1) pip3 install requests
+1) pip install -r requirements.txt
 2) python3 DNSWatch-take-home.py
+
+
