@@ -13,6 +13,6 @@ When load_domain_feed is called with a URL. It does an HTTP request to the URL t
 ## is_domain_in_domain_feed
 This simply checks if the target is in the HashSet and returns a boolean.
 
-# Reason for decisions made:
+## Reason for decisions made:
 Class: I made it its own class because it was supposed to be its own module and that made me comfortable using _domain_feed as global.
 HashSet: Checking if the set contains a domain is O(1) assuming we don't have any collisions.
