@@ -31,19 +31,31 @@ if __name__ == "__main__":
     # User Interface
     print("Enter domain to check against the domain feed. \n q to quit \n l:<url> to load a new domain feed")
     while True:
-        # Get user input
-        usr_input = input('== ')
+        # Get user input and remove spaces
+        usr_input = input('== ').replace(" ", "")
         # Act upon user input
+        # q
         if usr_input == 'q':
             print("exiting")
             exit(0)
+        # The user doesn't give any input
         elif usr_input == '':
             print("Enter domain to check against the domain feed. \n q to quit \n l:<url> to load a new domain feed")
+        # l: load a new domain feed
         elif usr_input[:2] == "l:":
             print("loading data from: " + usr_input[2:])
             _domain_feed.load_domain_feed(usr_input[2:])
             print("New data loaded")
-        elif _domain_feed.is_domain_in_domain_feed(usr_input):
-            print("Domain is in the domain feed")
+        # The only option left is check domain
         else:
-            print("Domain is not in domain feed")
+            # Check the domain against the domain feed
+            is_in_domain_feed = _domain_feed.is_domain_in_domain_feed(usr_input)
+            # If it is in the domain feed
+            if is_in_domain_feed:
+                print("Domain is in the domain feed")
+            # If it is not in the domain feed
+            elif not is_in_domain_feed:
+                print("Domain is not in domain feed")
+            # We should never get here
+            else:
+                print('Something went very wrong')
